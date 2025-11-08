@@ -6,29 +6,7 @@ from django.dispatch import receiver
 # from django.utils.translation import ugettext_lazy as _
 
 # # Create your models here.
-# class Post(models.Model):
-#     ''''
-#     thes class  for post app
-#     '''
-#     auhter=models.ForeignKey('User',on_delete=models.CASCADE)
-#     image=models.ImageField(null=True,blank=True)
-#     title=models.CharField(max_length=250)
-#     content=models.TextField()
-#     status=models.BooleanField()
-#     category=models.ForeignKey('Category',on_delete=models.SET_NULL,null=True)
-#     creat_date=models.DateTimeField(auto_now_add=True)
-#     update_date=models.DateTimeField(auto_now=True)
-#     pubilsh_date=models.DateTimeField()
 
-#     def __str__(self):
-#         return self.title
-
-
-# class Category(models.Model):
-#     name=models.CharField(max_length=25)
-
-#     def __str__(self):
-#         return self.name
 
 class UserManager(BaseUserManager):
     def create_user(self,email,password,**extra_fields):
