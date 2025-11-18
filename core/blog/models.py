@@ -13,11 +13,9 @@ class Post(models.Model):
     image=models.ImageField(null=True,blank=True)
     title=models.CharField(max_length=250)
     content=models.TextField()
-    status=models.BooleanField()
     category=models.ForeignKey('Category',on_delete=models.SET_NULL,null=True)
     creat_date=models.DateTimeField(auto_now_add=True)
     update_date=models.DateTimeField(auto_now=True)
-    pubilsh_date=models.DateTimeField()
 
     def __str__(self):
         return self.title

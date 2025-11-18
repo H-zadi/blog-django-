@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   {% for post in postlist %}
+     <a href='{% url "blog:detail1" pk=post.id %}'><h1>{{ post.title }} </h1> </a>
+     <a href="{% url 'blog:delet1' pk=post.id %}">delet</a>
+     
+   {% endfor %}
+   <a href="{% url 'blog:create' %}">create</a>
+   
+  
+</body>
+</html>
